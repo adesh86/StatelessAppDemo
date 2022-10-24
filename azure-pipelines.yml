@@ -13,7 +13,7 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: Docker Image build and push
+- stage: Build
   displayName: Build and push stage
   jobs:
   - job: Build
@@ -30,7 +30,7 @@ stages:
         tags: |
           $(tag)
 
-- stage: App Deployment to kubernetes
+- stage: Deployment
   displayName: App Deployment to kubernetes
   jobs:
   - job: Deployment
