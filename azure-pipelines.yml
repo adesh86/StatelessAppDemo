@@ -10,7 +10,7 @@ variables:
   imageRepository: 'imagestatelessappdemo'
   containerRegistry: 'containerregistryimage.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: 'latest'
 
 stages:
 - stage: Build
