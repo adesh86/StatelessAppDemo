@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mynodejsdockerrepo
-        image: containerregistryimage.azurecr.io/imagestatelessappdemo:latest
+        image: containerregistryimage.azurecr.io/imagestatelessappdemo:v1.0.0
         ports:
         - containerPort: 8080
 # service type loadbalancer       
