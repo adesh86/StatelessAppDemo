@@ -14,10 +14,10 @@ variables:
 
 stages:
 - stage: Build
-  displayName: Build and push stage
+  displayName: Build and Push Docker Container Image
   jobs:
   - job: Build
-    displayName: Build and Push
+    displayName: Build and Push Docker Container Image
 
     steps:
     - task: Docker@2
@@ -34,7 +34,7 @@ stages:
   displayName: App Deployment to kubernetes
   jobs:
   - job: Deployment
-    displayName: App Deployment to AKS
+    displayName: Application Deployment to AKS
 
     steps:   
     - task: Kubernetes@1
