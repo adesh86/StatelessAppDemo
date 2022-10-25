@@ -9,7 +9,7 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('This is an example of stateless application deployment in kubernetes cluster - v1.0.0');
+  res.send('This is an example of stateless application deployment in kubernetes cluster');
 });
 
 app.listen(PORT, HOST, () => {
