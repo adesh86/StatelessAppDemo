@@ -31,13 +31,14 @@ stages:
           $(tag)
 
 - stage: Deployment
-  displayName: App Deployment to kubernetes
+  displayName: Application Deployment to kubernetes cluster
   jobs:
   - job: Deployment
-    displayName: Application Deployment to AKS
+    displayName: Application Deployment to AKS cluster
 
     steps:   
     - task: Kubernetes@1
+      displayName: Application Deployment to AKS cluster
       inputs:
         connectionType: 'Kubernetes Service Connection'
         kubernetesServiceEndpoint: 'spnazdok8s'
@@ -47,3 +48,5 @@ stages:
         configuration: '$(Build.SourcesDirectory)/aks-app-deployment.yaml'
         secretType: 'dockerRegistry'
         containerRegistryType: 'Azure Container Registry'
+        
+      
