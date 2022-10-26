@@ -6,7 +6,7 @@ pool:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'd4eacb9b-56ac-4b33-8ca4-2eb43f8635af'
+  dockerRegistryServiceConnection: 'scacrconnection'
   imageRepository: 'imagestatelessappdemo'
   containerRegistry: 'containerregistryimage.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
